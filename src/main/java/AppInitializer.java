@@ -1,3 +1,4 @@
+import bean.MyConnection;
 import bean.SpringBean1;
 import bean.SpringBean2;
 import bean.SpringBean3;
@@ -38,8 +39,12 @@ public class AppInitializer {
         SpringBean3 bean3 = ctx.getBean(SpringBean3.class);
         System.out.println("bean3");
 */
-        Object SpringBean3 = ctx.getBean("springBean3");
-        System.out.println("Bean 3");
+        //Another way to get the bean
+        /*Object SpringBean3 = ctx.getBean("springBean3");
+        System.out.println("Bean 3");*/
+
+        MyConnection myConnection = ctx.getBean(MyConnection.class);
+        System.out.println(myConnection);
 
         ctx.close();
     }
