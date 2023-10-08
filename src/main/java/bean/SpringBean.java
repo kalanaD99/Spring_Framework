@@ -8,4 +8,7 @@ public class SpringBean {
     public SpringBean(){
         System.out.println("Spring Bean Object Created!");
     }
+    public void test1(){
+        System.out.println("Spring Bean Tested");
+    }
 }
