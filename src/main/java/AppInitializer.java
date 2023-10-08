@@ -1,8 +1,6 @@
-import bean.SpringBean;
+import bean.SpringBean1;
 import config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.sql.SQLOutput;
 
 public class AppInitializer {
     public static void main(String[] args) {
@@ -27,7 +25,9 @@ public class AppInitializer {
         ctx.register(AppConfig.class);
         ctx.refresh();
 
-        SpringBean bean = ctx.getBean(SpringBean.class);
+        //to get the bean through the class
+        SpringBean1 bean = ctx.getBean(SpringBean1.class);
+
         bean.test1();
         System.out.println(bean);
 
