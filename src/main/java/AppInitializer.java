@@ -28,11 +28,18 @@ public class AppInitializer {
         ctx.refresh();
 
         //to get the bean through the class
-        SpringBean1 bean = ctx.getBean(SpringBean1.class);
+       /* SpringBean1 bean1 = ctx.getBean(SpringBean1.class);
+        bean1.test1();
+        System.out.println("bean1");
+
         SpringBean2 bean2 = ctx.getBean(SpringBean2.class);
+        System.out.println("bean2");
+
         SpringBean3 bean3 = ctx.getBean(SpringBean3.class);
-        bean.test1();
-        System.out.println(bean);
+        System.out.println("bean3");
+*/
+        Object SpringBean3 = ctx.getBean("springBean3");
+        System.out.println("Bean 3");
 
         ctx.close();
     }
