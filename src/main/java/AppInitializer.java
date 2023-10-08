@@ -1,4 +1,6 @@
 import bean.SpringBean1;
+import bean.SpringBean2;
+import bean.SpringBean3;
 import config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -27,7 +29,8 @@ public class AppInitializer {
 
         //to get the bean through the class
         SpringBean1 bean = ctx.getBean(SpringBean1.class);
-
+        SpringBean2 bean2 = ctx.getBean(SpringBean2.class);
+        SpringBean3 bean3 = ctx.getBean(SpringBean3.class);
         bean.test1();
         System.out.println(bean);
 
